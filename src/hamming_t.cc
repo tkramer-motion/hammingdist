@@ -6,7 +6,7 @@
 
 using namespace hamming;
 
-static constexpr std::array<char, 4> valid_chars{'A', 'C', 'G', 'T'};
+static constexpr std::array<char, 20> valid_chars{'A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y'};
 static constexpr std::array<char, 6> invalid_chars{' ', 'N', '*',
                                                    '?', 'a', '.'};
 static std::vector<bool> valid_use_gpu_values() {

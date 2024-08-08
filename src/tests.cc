@@ -11,7 +11,7 @@ std::string make_test_string(int n, std::mt19937 &gen, bool include_x) {
     ++max_index;
   }
   std::uniform_int_distribution<> distrib(0, max_index);
-  std::array<char, 6> c{'A', 'C', 'G', 'T', '-', 'X'};
+  std::array<char, 20> c{'A', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'Y'};
   s.reserve(n);
   for (int i = 0; i < n; ++i) {
     s.push_back(c[distrib(gen)]);
