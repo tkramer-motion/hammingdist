@@ -30,11 +30,27 @@ namespace hamming {
 // 0011: 'X' (only if include_x = true)
 std::array<GeneBlock, 256> lookupTable(bool include_x) {
   std::array<GeneBlock, 256> lookup{};
+  //ACDEFGHIKLMNPQRSTVWY
   lookup[std::size_t('-')] = 0xff;
   lookup[std::size_t('A')] = 1 | (1 << n_bits_per_gene);
   lookup[std::size_t('C')] = (1 << 1) | (1 << (n_bits_per_gene + 1));
-  lookup[std::size_t('G')] = (1 << 2) | (1 << (n_bits_per_gene + 2));
-  lookup[std::size_t('T')] = (1 << 3) | (1 << (n_bits_per_gene + 3));
+  lookup[std::size_t('D')] = (1 << 2) | (1 << (n_bits_per_gene + 2));
+  lookup[std::size_t('E')] = (1 << 3) | (1 << (n_bits_per_gene + 3));
+  lookup[std::size_t('F')] = (1 << 4) | (1 << (n_bits_per_gene + 4));
+  lookup[std::size_t('G')] = (1 << 5) | (1 << (n_bits_per_gene + 5));
+  lookup[std::size_t('H')] = (1 << 6) | (1 << (n_bits_per_gene + 6));
+  lookup[std::size_t('I')] = (1 << 7) | (1 << (n_bits_per_gene + 7));
+  lookup[std::size_t('K')] = (1 << 8) | (1 << (n_bits_per_gene + 8));
+  lookup[std::size_t('M')] = (1 << 9) | (1 << (n_bits_per_gene + 9));
+  lookup[std::size_t('N')] = (1 << 10) | (1 << (n_bits_per_gene + 10));
+  lookup[std::size_t('P')] = (1 << 11) | (1 << (n_bits_per_gene + 11));
+  lookup[std::size_t('Q')] = (1 << 12) | (1 << (n_bits_per_gene + 12));
+  lookup[std::size_t('R')] = (1 << 13) | (1 << (n_bits_per_gene + 13));
+  lookup[std::size_t('S')] = (1 << 14) | (1 << (n_bits_per_gene + 14));
+  lookup[std::size_t('T')] = (1 << 15) | (1 << (n_bits_per_gene + 15));
+  lookup[std::size_t('V')] = (1 << 16) | (1 << (n_bits_per_gene + 16));
+  lookup[std::size_t('W')] = (1 << 17) | (1 << (n_bits_per_gene + 17));
+  lookup[std::size_t('Y')] = (1 << 18) | (1 << (n_bits_per_gene + 18));
   if (include_x) {
     lookup[std::size_t('X')] =
         1 | (1 << 1) | (1 << n_bits_per_gene) | (1 << (n_bits_per_gene + 1));
