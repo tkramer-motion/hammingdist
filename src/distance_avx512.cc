@@ -7,7 +7,7 @@ int distance_avx512(const std::vector<GeneBlock> &a,
                     const std::vector<GeneBlock> &b, int max_dist) {
   // distance implementation using AVX512 simd intrinsics
   // a 512-bit register holds 64 GeneBlocks, i.e. 128 genes
-  constexpr std::size_t n_geneblocks{64};
+  constexpr std::size_t n_geneblocks{8};
   int r{0};
   // mask to select LSB of each gene
   const __m512i lsb = _mm512_set1_epi8(1);
